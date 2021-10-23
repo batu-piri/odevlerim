@@ -1,2 +1,2 @@
 # Odev HTML
-## bu benim kodluyoruz-da aldigim 2. odev...
+## burada benim koluyoruzorg/patikada yaptigim odevlerim yer almaktadir.
