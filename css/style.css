@@ -1,0 +1,43 @@
+body {
+    background-color: #e0c9a9;
+}
+
+h1 {
+    color:#5e2610;
+    font-style: italic;
+}
+
+.bold {
+    color: #000;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.25rem;
+}
+
+.ayni {
+    color: #963102;
+}
+
+.center {
+    margin: 0 auto;
+    width: 800px;
+}
+
+.baslik {
+    display: block;
+    color: #fff;
+    background-color: #963102;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    max-width: 100%;
+    width: 250px;
+}
+
+.sagtaraf {
+    text-align: right;
+    font-family: arial;
+    letter-spacing: 2px;
+}
