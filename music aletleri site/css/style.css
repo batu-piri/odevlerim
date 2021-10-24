@@ -1,0 +1,44 @@
+body {
+    text-align: center; background-color: bisque;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul li, a {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.inline {
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.list-style {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.text-purple {
+    color: blueviolet;
+}
+
+.dark-yellow {
+    color: rgb(153, 155, 35);
+}
+
+.bullet {
+    list-style-type:circle;
+    list-style-position: inside;
+}
+
+.ordered {
+    list-style-type: decimal;
+}
+
+ol li {
+    margin-bottom: 2rem;
+}
