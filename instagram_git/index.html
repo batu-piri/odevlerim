@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,900;1,400&display=swap" rel="stylesheet">
+
+    <title>Instagram</title>
+</head>
+
+<body>
+
+  <!-- sprites -->
+  <svg style="display: none;">
+
+    <symbol id="home" viewBox="0 0 16 16">
+      <g>
+        <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+      </g>
+    </symbol>
+
+    <symbol id="heart" viewBox="0 0 16 16">
+      <g>
+        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+      </g>
+    </symbol>
+  </svg>
+
+<!-- ! Navbar -- start -->
+<div class="fixed-top bg-white border-bottom" style="height: 5.4rem">
+  <div class="container mx-auto">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+  
+        <a class="navbar-brand" href="#">
+          <img class="logoins" src="images/downloadins.png">
+        </a>
+  
+        <button 
+          class="navbar-toggler" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#navbarSupportedContent" 
+          aria-controls="navbarSupportedContent" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation"
+          >
+          <span class="navbar-toggler-icon me-5"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+        <form class="mx-auto">
+          <input class="form-control form-input-me" 
+          type="search" 
+          placeholder="Ara" 
+          aria-label="Search"
+          style="font-family: Arial, Helvetica, sans-serif; height: 28px; width: 216px;"
+          >       
+        </form>
+  
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item me-3">
+            <a class="nav-link active" aria-current="page" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="green" class="bi bi-house-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+              </svg>
+            </a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="blue" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+                <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+              </svg>
+            </a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="blue" class="bi bi-compass" viewBox="0 0 16 16">
+              <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+              <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/>
+            </svg></a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="blue" class="bi bi-heart" viewBox="0 0 16 16">
+                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+              </svg>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <img class="rounded-circle" src="https://picsum.photos/id/77/25/25" alt="user">
+            </a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li> -->
+        </ul>
+        </div>
+      </div> <!-- /. container-fluid -->
+    </nav>
+  </div>
+</div>
+<!-- ! Navbar -- end -->
+
+<!-- ! Main section -- start -->
+
+<div class="container"> <!-- container start -->
+
+  <div class="row my-1 d-flex justify-content-between">
+
+    <div class="col-sm-7">
+      
+      <!-- 1.row start -->
+      <div class="row bg-white border py-4 text-center d-flex align-content-center">
+        <div class="col-sm-2">
+          <div class="mb-3">
+            <a href="#">
+              <img class="rounded-circle img-thumbnail d-inline-block border border-danger border-1" src="https://picsum.photos/id/88/55/55" alt="">
+            </a>
+          </div>
+          <p>Kodluyoruz</p>
+        </div>
+        <div class="col-sm-2">
+          <div class="mb-3">
+            <a href="#">
+              <img class="rounded-circle img-thumbnail d-inline-block border border-danger border-1" src="https://picsum.photos/id/89/55/55" alt="">
+            </a>
+          </div>
+          <p>Patika Dev</p>
+        </div>
+        <div class="col-sm-2">
+          <div class="mb-3">
+            <img class="rounded-circle img-thumbnail d-inline-block border border-danger border-1" src="https://picsum.photos/id/99/55/55" alt="">
+          </div>
+          <p>Kablosuz kedi</p>
+        </div>
+        <div class="col-sm-2">
+          <div class="mb-3">
+            <img class="rounded-circle img-thumbnail d-inline-block border border-danger border-1" src="https://picsum.photos/id/100/55/55" alt="">
+          </div>
+          <p>Bootcamp</p>
+        </div>
+        <div class="col-sm-2">
+          <div class="mb-3">
+            <img class="rounded-circle img-thumbnail d-inline-block border border-danger border-1" src="https://picsum.photos/id/10/55/55" alt="">
+          </div>
+          <p>Google</p>
+        </div>
+        <div class="col-sm-2">
+          <div class="mb-3">
+            <img class="rounded-circle img-thumbnail d-inline-block border border-danger border-1" src="https://picsum.photos/id/11/55/55" alt="">
+          </div>
+          <p>Facebook</p>
+        </div>
+        
+      </div> <!-- /.1-row -->
+
+      <div class="row my-5 bg-white border">
+
+        <div class="header d-flex justify-content-between py-3">
+          <div>
+            <img class="rounded-circle img-thumbnail d-inline-block border border-danger border-1 me-3" src="https://picsum.photos/id/77/45/45" alt="">
+            <span class="following">Kodluyoruzla yolculuk!</span>
+          </div>
+          <div>
+            <p style="padding: 2rem 0;">* * *</p>
+          </div>
+        </div> <!-- /.header -->
+
+        <img class="d-block w-100 px-0" src="https://picsum.photos/id/68/450/550" alt="">
+
+        <div class="p-4 border-bottom">
+          <div class="d-flex justify-content-between">
+            <div class="leftside">
+              <a href="#">
+                <img class="me-3" src="images/icons/heart.svg" width="36" alt="">
+              </a>
+              <a href="#">
+                <img class="me-3" src="images/icons/chat.svg" width="36" alt="">
+              </a>
+              <a href="#">
+                <img src="images/icons/telegram-svgrepo-com.svg" width="36" alt="">
+              </a>
+            </div>
+            <div class="rightside">
+              <a href="#"><img src="images/icons/bookmark.svg" width="36" alt=""></a>
+            </div>
+          </div>
+          <p class="my-3 fw-bold">30,555 likes</p>
+          <p class="fw-bold">Kodluyoruzla hayat dolu dolu geciyor, nice mutlu yillara! 
+            <a class="text-decoration-none" href="#">
+              <span class="text-muted">...dahasi</span>
+            </a> 
+          </p>
+          <p class="my-3 text-muted">
+            350 yorumun hepsini goster!
+          </p>
+          <p class="mb-3 text-muted">35 dakika once</p>
+        </div> <!-- border-bottom-end -->
+        <div class="p-4">
+          <div class="d-flex justify-content-between align-middle">
+
+            <div class="leftside">
+              <a href="#">
+                <img class="me-3" src="images/icons/emoji-smile.svg" width="36" alt="">
+              </a>
+              <a class="text-decoration-none" href="#">
+                <span class="text-muted align-middle">Yorum ekle</span>
+              </a>
+            </div>
+
+            <div class="rightside align-middle">
+              <a class="text-decoration-none" href="#">
+                <p class="text-info py-3">Post</p>
+              </a>
+            </div>
+
+          </div>          
+        </div>
+
+
+
+      </div> <!-- /.2-row -->
+      <div class="row my-5 bg-white border">
+
+        <div class="header d-flex justify-content-between py-3">
+          <div>
+            <img class="rounded-circle img-thumbnail d-inline-block border border-danger border-1 me-3" src="https://picsum.photos/id/77/45/45" alt="">
+            <span class="following">Kodluyoruzla yolculuk!</span>
+          </div>
+          <div>
+            <p style="padding: 2rem 0;">* * *</p>
+          </div>
+        </div> <!-- /.header -->
+
+        <img class="d-block w-100 px-0" src="https://picsum.photos/id/69/450/550" alt="">
+
+        <div class="p-4 border-bottom">
+          <div class="d-flex justify-content-between">
+            <div class="leftside">
+              <a href="#">
+                <img class="me-3" src="images/icons/heart.svg" width="36" alt="">
+              </a>
+              <a href="#">
+                <img class="me-3" src="images/icons/chat.svg" width="36" alt="">
+              </a>
+              <a href="#">
+                <img src="images/icons/telegram-svgrepo-com.svg" width="36" alt="">
+              </a>
+            </div>
+            <div class="rightside">
+              <a href="#"><img src="images/icons/bookmark.svg" width="36" alt=""></a>
+            </div>
+          </div>
+          <p class="my-3 fw-bold">30,555 likes</p>
+          <p class="fw-bold">Kodluyoruzla hayat dolu dolu geciyor, nice mutlu yillara! 
+            <a class="text-decoration-none" href="#">
+              <span class="text-muted">...dahasi</span>
+            </a> 
+          </p>
+          <p class="my-3 text-muted">
+            350 yorumun hepsini goster!
+          </p>
+          <p class="mb-3 text-muted">35 dakika once</p>
+        </div> <!-- border-bottom-end -->
+        <div class="p-4">
+          <div class="d-flex justify-content-between align-middle">
+
+            <div class="leftside">
+              <a href="#">
+                <img class="me-3" src="images/icons/emoji-smile.svg" width="36" alt="">
+              </a>
+              <a class="text-decoration-none" href="#">
+                <span class="text-muted align-middle">Yorum ekle</span>
+              </a>
+            </div>
+
+            <div class="rightside align-middle">
+              <a class="text-decoration-none" href="#">
+                <p class="text-info py-3">Post</p>
+              </a>
+            </div>
+
+          </div>          
+        </div>
+
+
+
+      </div> <!-- /.2-row -->
+      <div class="row my-5 bg-white border">
+
+        <div class="header d-flex justify-content-between py-3">
+          <div>
+            <img class="rounded-circle img-thumbnail d-inline-block border border-danger border-1 me-3" src="https://picsum.photos/id/77/45/45" alt="">
+            <span class="following">Kodluyoruzla yolculuk!</span>
+          </div>
+          <div>
+            <p style="padding: 2rem 0;">* * *</p>
+          </div>
+        </div> <!-- /.header -->
+
+        <img class="d-block w-100 px-0" src="https://picsum.photos/id/63/450/550" alt="">
+
+        <div class="p-4 border-bottom">
+          <div class="d-flex justify-content-between">
+            <div class="leftside">
+              <a href="#">
+                <img class="me-3" src="images/icons/heart.svg" width="36" alt="">
+              </a>
+              <a href="#">
+                <img class="me-3" src="images/icons/chat.svg" width="36" alt="">
+              </a>
+              <a href="#">
+                <img src="images/icons/telegram-svgrepo-com.svg" width="36" alt="">
+              </a>
+            </div>
+            <div class="rightside">
+              <a href="#"><img src="images/icons/bookmark.svg" width="36" alt=""></a>
+            </div>
+          </div>
+          <p class="my-3 fw-bold">30,555 likes</p>
+          <p class="fw-bold">Kodluyoruzla hayat dolu dolu geciyor, nice mutlu yillara! 
+            <a class="text-decoration-none" href="#">
+              <span class="text-muted">...dahasi</span>
+            </a> 
+          </p>
+          <p class="my-3 text-muted">
+            350 yorumun hepsini goster!
+          </p>
+          <p class="mb-3 text-muted">35 dakika once</p>
+        </div> <!-- border-bottom-end -->
+        <div class="p-4">
+          <div class="d-flex justify-content-between align-middle">
+
+            <div class="leftside">
+              <a href="#">
+                <img class="me-3" src="images/icons/emoji-smile.svg" width="36" alt="">
+              </a>
+              <a class="text-decoration-none" href="#">
+                <span class="text-muted align-middle">Yorum ekle</span>
+              </a>
+            </div>
+
+            <div class="rightside align-middle">
+              <a class="text-decoration-none" href="#">
+                <p class="text-info py-3">Post</p>
+              </a>
+            </div>
+
+          </div>          
+        </div>
+
+
+
+      </div> <!-- /.2-row -->
+
+    </div> <!-- /.col-sm-7 -->
+
+
+
+
+
+
+
+
+
+
+      <!-- ? rightpanel -- col-sm-4 --start -->
+<div class="col-sm-4 sticky-sm-top py-3"> 
+
+  
+
+  <div class="row">
+    <div class="col-3 text-center py-5">
+      <img class="rounded-circle" src="https://picsum.photos/id/77/55/55" alt="image">
+    </div>
+    <div class="col d-flex flex-column justify-content-center align-content-center">
+      <h5 class="fw-bold">batupiri7</h5>
+      <p class="text-muted mb-0">batu piri</p>
+    </div>
+    <div class="col-2 text-center text-primary fw-bold" style="padding: 5rem 0;">
+      Switch
+    </div>
+  </div>
+
+
+  <div class="row fw-bold px-3">
+    <div class="col d-flex flex-column justify-content-center align-content-center">
+      <p class="mb-0">
+        <strong class="text-muted">Senin Icin Oneriler</strong>
+      </p>
+    </div>
+    <div class="col-2 text-center" style="padding: 4rem 0;">
+      Tumunu <br> gor
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-2 text-center py-5">
+      <img class="rounded-circle" src="https://picsum.photos/id/52/45/45" alt="image">
+    </div>
+    <div class="col d-flex flex-column justify-content-center align-content-center">
+      <h5 class="fw-bold">kodluyoruz.org</h5>
+      <p class="text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    </div>
+    <div class="col-2 text-center text-primary fw-bold" style="padding: 4rem 0;">
+      Follow
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2 text-center py-5">
+      <img class="rounded-circle" src="https://picsum.photos/id/53/45/45" alt="image">
+    </div>
+    <div class="col d-flex flex-column justify-content-center align-content-center">
+      <h5 class="fw-bold">kodluyoruz.org</h5>
+      <p class="text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    </div>
+    <div class="col-2 text-center text-primary fw-bold" style="padding: 4rem 0;">
+      Follow
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2 text-center py-5">
+      <img class="rounded-circle" src="https://picsum.photos/id/54/45/45" alt="image">
+    </div>
+    <div class="col d-flex flex-column justify-content-center align-content-center">
+      <h5 class="fw-bold">kodluyoruz.org</h5>
+      <p class="text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    </div>
+    <div class="col-2 text-center text-primary fw-bold" style="padding: 4rem 0;">
+      Follow
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2 text-center py-5">
+      <img class="rounded-circle" src="https://picsum.photos/id/55/45/45" alt="image">
+    </div>
+    <div class="col d-flex flex-column justify-content-center align-content-center">
+      <h5 class="fw-bold">kodluyoruz.org</h5>
+      <p class="text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    </div>
+    <div class="col-2 text-center text-primary fw-bold" style="padding: 4rem 0;">
+      Follow
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      
+      <ul class="list-inline lh-lg px-3">
+        <li class="list-inline-item lh-lg text-muted"><a href="#">Lorem.</a></li>
+        <li class="list-inline-item lh-lg text-muted"><a href="#">Architecto.</a></li>
+        <li class="list-inline-item lh-lg text-muted"><a href="#">Molestiae.</a></li>
+        <li class="list-inline-item lh-lg text-muted"><a href="#">Quaerat!</a></li>
+        <li class="list-inline-item lh-lg text-muted"><a href="#">Sint.</a></li>
+        <li class="list-inline-item lh-lg text-muted"><a href="#">Nulla?</a></li>
+        <li class="list-inline-item lh-lg text-muted"><a href="#">Inventore!</a></li>
+        <li class="list-inline-item lh-lg text-muted"><a href="#">Iure!</a></li>
+        <li class="list-inline-item lh-lg text-muted"><a href="#">Odio.</a></li>
+        <li class="list-inline-item lh-lg text-muted"><a href="#">Accusamus!</a></li>
+        <li class="list-inline-item lh-lg text-muted"><a href="#">Ipsum.</a></li>
+        <li class="list-inline-item lh-lg text-muted"><a href="#">Voluptates.</a></li>
+        <li class="list-inline-item lh-lg text-muted"><a href="#">Assumenda!</a></li>
+        <li class="list-inline-item lh-lg text-muted"><a href="#">Porro!</a></li>
+        <li class="list-inline-item lh-lg text-muted"><a href="#">Sed?</a></li>
+      </ul>
+
+      <h4 class="mt-5 px-3 text-muted">2021 INSTAGRAM FROM batu &copy;</h4>
+    </div>
+  </div>
+
+
+</div> <!-- ? rightpanel -- col-sm-4 -- end -->
+
+  </div> <!-- ? main row end -->
+</div> <!-- ? main container end -->
+
+<!-- ! Main section -- end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- examples! -->
+<!-- // <div class="social__item">
+  <a href="#">
+    <svg class="social__icon">
+        <use xlink:href="#home"></use>
+    </svg>
+    <svg>
+      <use xlink:href="#heart"></use>
+    </svg>
+  </a>
+</div> -->
+    
+<!-- ex: 1 -->
+<!-- <div class="container py-5 my-5">
+  <div class="row">
+    
+    <div class="col bg-success">
+      1 of 3    #COL
+    </div>
+    <div class="col-6 bg-warning">
+      2 of 3 (wider)     #COL-6
+    </div>
+    <div class="col bg-info">
+      3 of 3     #COL
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      1 of 3 #COL
+    </div>
+    <div class="col-5 bg-danger">
+      2 of 3 (wider)  #COL-5
+    </div>
+    <div class="col  bg-primary">
+      3 of 3 #COL
+    </div>
+  </div>
+
+</div> -->
+
+<!-- ex: 2 -->
+
+<!-- <div class="container">
+
+  <div class="row justify-content-md-center mb-3">    
+    <div class="col col-lg-2 bg-danger">
+      1 of 3_col col-lg-2
+    </div>
+    <div class="col-md-auto bg-dark">
+      Variable width content_col-md-auto
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, fugit!
+    </div>
+    <div class="col col-lg-2 bg-info">
+      3 of 3_col col-lg-2
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col bg-info">
+      1 of 3 __#COL
+    </div>
+    <div class="col-md-auto bg-primary">
+      Variable width content____#COL-MD-AUTO  Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur.
+    </div>
+    <div class="col col-lg-2 bg-danger">
+      3 of 3 ____#COL___#COL-LG-2
+    </div>
+  </div>
+
+</div> -->
+
+
+
+  
+
+
+
+
+
+
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
