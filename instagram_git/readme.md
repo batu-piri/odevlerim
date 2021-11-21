@@ -1,3 +1,3 @@
 # Instagram
 
-## cloning the Instagram with the Bootstrap verdion 5.
+## simple clone of the Instagram with the Bootstrap v.5
