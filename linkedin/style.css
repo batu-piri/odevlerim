@@ -1,0 +1,106 @@
+body {
+    padding-top: 4rem;
+    background-color: rgb(223, 223, 223);
+}
+
+.onemli {
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+}
+
+.wrapper {
+    border-radius: 7px;  
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.main {
+    position: relative;
+}
+
+.user {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bg1 {
+    height: 50px;
+    background-color: #a0b3b7;
+}
+
+.access {
+    position: relative;
+}
+
+.gold {
+    width: 15px;
+    height: 15px;
+    background-color: gold;
+    display: inline-block;
+    border-radius: 3px;
+
+    position: absolute;
+    left: 10px;
+    bottom: 25px;
+}
+
+.connection {
+    position: relative;
+}
+
+.number {
+    position: absolute;
+    top: 15px;
+    right: 10px;    
+    color: blue;
+}
+
+.upper {
+    position: relative;
+}
+
+.plus {
+    position: absolute;
+    top: 43%;
+    right: 15px;
+}
+
+.center-part {
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+.card-position {
+    position: relative;
+}
+
+.icon-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    z-index: 2;
+}
+
+.icon-arrow-left {
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    /* z-index: 2;  */
+}
+
+.stick1 {
+    width: 60%;
+}
+
+.stick2 {
+    width: 40%;
+}
