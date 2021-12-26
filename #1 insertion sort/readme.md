@@ -20,3 +20,14 @@ Lets rearrange our given above array with stages in INSERTION SORT:
 3. Time Complexity: Average case: Aradığımız sayının ortada olması (16, 18),Worst case: Aradığımız sayının sonda olması (22, 27), Best case: Aradığımız sayının dizinin en başında olması (2, 6).
 
 4. Dizi siralandiktan sonra "18" sayisi "Average Case" kapsamian girer!
+
+***
+
+Now lets show first 4 steps of this array according to INSERTION SORT: 
+* [7,3,5,8,2,9,4,15,6]
+***
+1) [7,3,5,8,2,9,4,15,6]
+2) [2,3,5,8,7,9,4,15,6] 7 & 2;
+3) [2,3,5,8,7,9,4,15,6] STAYS THE SAME;
+4) [2,3,4,8,7,9,5,15,6] 5 & 4;
+
